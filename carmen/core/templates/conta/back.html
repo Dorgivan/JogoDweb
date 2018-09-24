@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<h3>Esperamos que você volta sempre!</h3>
+
+	<a href="{% url 'core:index-login' %}" class="btn btn-default">Fazer login novamente</a>
+
+	<a href="{% url 'core:cadastro' %}" class="btn btn-default">Quero me cadastrar</a>
+
+{% endblock %}

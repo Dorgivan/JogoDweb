@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="lado-img">
+    <img src="{{ object.imagem.url }}">
+  </div>
+  <div class="lado">
+      <p>
+        {{ object.texto|safe }}
+      </p>
+    <div class="">
+        {% for r in rel %}
+          Va para <a href="{% url 'core:jogo' r.ir_para_id %}" class="btn btn-primary" name='{{ r.relaciona_id }}'>{{ r.ir_para_id }}</a>
+        {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}
